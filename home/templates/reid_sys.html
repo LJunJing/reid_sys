@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'reid_sys.css' %}" />
+    <title>ReID System</title>
+</head>
+
+<body>
+    <!--  侧边栏  -->
+    <div class="sidebar">
+        <div class="main-title">
+            <div class="title-icon"></div>
+            ReID System
+        </div>
+
+        <div class="menu">
+            <div class="menu-title">model:</div>
+            <select id="s0">
+                <option value="">请选择</option>
+                <option value="ResNet50">ResNet50</option>
+                <option value="DeiT">DeiT</option>
+                <option value="FFusion">FFusion</option>
+            </select>
+        </div>
+
+        <div class="menu">
+            <div class="menu-title">dataset:</div>
+            <select id="s1">
+                <option value="">请选择</option>
+                <option value="Market1501">Market1501</option>
+                <option value="DukeMTMC-reID">DukeMTMC-reID</option>
+            </select>
+        </div>
+
+        <div class="menu">
+            <div class="menu-title">gallery_num:</div>
+            <select id="s2">
+                <option value="">请选择</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+
+        <div class="menu">
+            <button class="submit-btn" id="b1">提交采样</button>
+        </div>
+    </div>
+
+    <!--  内容  -->
+    <div class="content">
+        <div class="wrapper">
+            <div class="content-title">Query</div>
+            <div class="img-wrapper">
+              <div style="width: 100px"  id="imgList1">Query图片显示处
+        {#            <input type="file" id="i1" class="picUpload"/>   <!--id="input_img" />-->#}
+        {#            <img class="add-icon" src="{% static 'img/plus.png'%}" alt="" />#}
+        {#            <div class="add-text">Query图片显示处</div>#}
+              </div>
+                <div id="show_img1" class="img-list"></div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="content-title">Gallery</div>
+            <div class="img-wrapper">
+                <div style="width: 100px" id="imgList2">Gallery图片显示处
+            {#            <input type="file" id="i2" class="picUpload" />#}
+            {#            <img class="add-icon" src="{% static 'img/plus.png'%}" alt="" />#}
+            {#            <div class="add-text">Gallery图片显示处</div>#}
+                </div>
+                <div id="show_img2" class="img-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static './reid_sys.js' %}"></script>
+</body>
+</html>

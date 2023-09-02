@@ -1,0 +1,197 @@
+body,
+html {
+  height: 95vh;
+  width: 95vw;
+  margin: 0;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+}
+* {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------------侧边栏-------------*/
+.sidebar {
+  position: fixed;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  color: rgb(0, 0, 0);
+  background-color: rgba(224, 224, 224, 0.5);
+}
+
+.sidebar.active .menu {
+  height: 0;
+}
+
+.main-title {
+  margin-left: 30px;
+  height: 70px;
+  font-size: 30px;
+  font-family: "KaiTi_GB2312";
+  font-weight: bold;
+  line-height: 70px;
+  color: rgb(0, 0, 0);
+}
+
+.title-icon {
+  background: url("./img/siderbarControl.png") no-repeat center/cover;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  transform: translateY(5px);
+}
+
+.submit-btn {
+  margin-left: 200px;
+  margin-top: 1rem;
+  font-family: "KaiTi_GB2312";
+}
+
+.menu {
+  display: block;
+  margin-top: 1rem;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  height: 100px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.menu:first-child {
+  margin-top: 0;
+}
+
+.menu select {
+  width: 250px;
+  height: 30px;
+  border: 1px solid rgba(224, 224, 224, 0.5);
+  color: rgb(0, 0, 0);
+  outline: none;
+  margin: 5px 15px 10px 15px;
+  font-size: 10px;
+  font-family: "KaiTi_GB2312";
+}
+
+.menu option {
+  width: 160px;
+  height: 40px;
+  font-family: "KaiTi_GB2312";
+}
+
+/*.menu.active .submenu {*/
+/*  height: 40px;*/
+/*  line-height: 40px;*/
+/*}*/
+
+.menu-title {
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  font-family: "KaiTi_GB2312";
+  text-align: left;
+  /*cursor: pointer;*/
+  margin: 20px 10px 0 20px;
+}
+
+/*------------内容--------------*/
+.content {
+  position: absolute;
+  left: 302px;
+  width: calc(100% - 320px);
+}
+.wrapper {
+  position: relative;
+  height: fit-content;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.5);
+}
+.content-title {
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  font-family: "KaiTi_GB2312";
+  text-align: left;
+  margin: 20px 10px 20px 20px;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 10px 20px 20px;
+  border: 5px dashed rgba(224, 224, 224, 0.5);
+}
+.img-wrapper > div:first-child {
+  white-space: nowrap;
+  color: #999;
+  font-size: 12px;
+  line-height: 1;
+}
+.add-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 8px;
+}
+.add-text {
+  color: #999;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.picUpload {
+  position: absolute;
+  outline: medium none;
+  cursor: pointer;
+  -moz-opacity: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+
+/*.submenu {*/
+/*  height: 40px;*/
+/*  line-height: 40px;*/
+/*  font-size: 10px;*/
+/*  transition: 0.5s;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*.submenu {*/
+/*  height: 0px;*/
+/*  line-height: 0px;*/
+/*  overflow: hidden;*/
+/*}*/
+
+.img-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* max-height: 100px; */
+}
+.img-list img {
+  margin: 0 10px;
+}
+
+.img-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.img-container span {
+  text-align: center;
+}
